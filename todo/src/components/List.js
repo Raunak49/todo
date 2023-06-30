@@ -3,7 +3,6 @@ import styles from './List.module.css';
 
 const List = (props) => {
     const { list } = props;
-
     const deleteHandler = (task) => {
         props.deleteItem(task);
     };

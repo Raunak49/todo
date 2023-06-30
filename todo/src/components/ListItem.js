@@ -5,6 +5,7 @@ const ListItem = (props) => {
     const { task } = props;
 
     const [isEdit, setIsEdit] = useState(false);
+    const [inputValue, setInputValue] = useState(task.task);
     const inputRef = useRef();
 
     const deleteIcon = <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3-fill" viewBox="0 0 16 16">
@@ -26,6 +27,7 @@ const ListItem = (props) => {
 
     const editHandler = () => {
         setIsEdit(true);
+        setInputValue(task.task);
         setTimeout(() => {
             inputRef.current.focus();
         } , 0);
@@ -33,12 +35,16 @@ const ListItem = (props) => {
 
     const submitHandler = () => {
         setIsEdit(false);
-        props.editTask(task, inputRef.current.value);
+        props.editTask(task, inputValue);
+    };
+
+    const changeHandler = (e) => {
+        setInputValue(e.target.value);
     };
 
     return (
         <div className={styles.item}>
-            <input type="text" className={`${styles.input} ${isEdit ? '' : styles.disable}`} defaultValue={ task.task } ref={ inputRef }/> 
+            <input type="text" className={`${styles.input} ${isEdit ? '' : styles.disable}`} value={ inputValue } ref={ inputRef } onChange={ changeHandler }/> 
             <button className={`${isEdit ? styles.editButton : styles.disable}`} onClick={ submitHandler } >{saveIcon}</button>
             <p className={`${styles.task} ${ isEdit ? styles.disable : '' }`}>{task.task}</p>
             <button className={ `${!isEdit ? styles.button : styles.disable}` } onClick={editHandler }>{ editIcon }</button>

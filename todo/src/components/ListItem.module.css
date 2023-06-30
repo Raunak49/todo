@@ -1,0 +1,64 @@
+.item {
+    display: flex;
+    justify-content: flex-end;
+    background: linear-gradient(90deg,
+                rgb(70, 12, 187) 0%,
+                #5e4dcd 100%);
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.task {
+    margin-right: auto;
+    margin-left: 5%;
+    font-size: 2em;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    color: white;
+}
+.input {
+    margin-block-end: 1em;
+    margin-block-start: 1em;
+    margin-right: auto;
+    margin-left: 5%;
+    background-color: transparent;
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    border-bottom: 2px white;
+    color: white;
+    font-size: 2em;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    outline: none;
+}
+.disable {
+    display: none;
+}
+.button {
+    background-color: transparent;
+    padding-right: 20px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    outline: none;
+    justify-self: flex-end;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.editButton {
+    background-color: transparent;
+    padding-right: 20px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    outline: none;
+    justify-self: flex-end;
+}
+svg {
+    width: 1.7em;
+    height: 1.7em;
+    fill: white;
+}
+.item:hover button {
+    opacity: 1;
+}

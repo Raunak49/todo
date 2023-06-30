@@ -1,0 +1,10 @@
+h1 {
+    font-size: 4em;
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 10%;
+    background: #3C17CF;
+    background: linear-gradient(to left, #2a118b 0%, #b256c9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

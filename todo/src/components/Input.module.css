@@ -1,0 +1,42 @@
+.inputGroup {
+    margin-top: 5%;
+}
+
+.input {
+    min-height: 50px;
+    max-width: 250px;
+    padding: 0 1rem;
+    font-size: 15px;
+    color: #ffffff;
+    border: 1px solid #5e4dcd;
+    border-radius: 6px 0 0 6px;
+    background-color: transparent;
+}
+
+.buttonSubmit {
+    min-height: 52px;
+    padding: .5em 1em;
+    border: none;
+    border-radius: 0 6px 6px 0;
+    background-color: #5e4dcd;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.buttonSubmit:hover {
+    background-color: #5e5dcd;
+}
+.buttonSubmit:active {
+    background-color: rgb(255, 56, 86);
+    /*50, 168, 80*/
+    box-shadow: rgb(201, 46, 70) 0px 0px 0px 0px;
+    transform: translateY(5px);
+    transition: 200ms;
+}
+.input:focus,
+.input:focus-visible {
+    border-color: #3898EC;
+    outline: none;
+}
